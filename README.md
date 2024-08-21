@@ -39,6 +39,7 @@ const buttonsToHide = ["Open GIF picker", "Open sticker picker", "Send a gift", 
 let css = "";
 buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));
 css = css.concat('[id="channel-attach-THREAD"]{display:none}');
+css = css.concat('div[class^="channelAppLauncher"]{display:none}');
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
 ```
@@ -50,18 +51,7 @@ const buttonsToHide = ["Open sticker picker", "Send a gift", "Boost this server"
 let css = "";
 buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));
 css = css.concat('[id="channel-attach-THREAD"]{display:none}');
-const style = document.createElement('style'); style.innerHTML = css;
-document.body.appendChild(style);
-```
-
-#### Experimental: Remove threads
-Removes the "Create thread" from the upload panel, as well as the new thread icon at the top of the ui.
-
-```js
-const buttonsToHide = ["Open sticker picker", "Send a gift", "Boost this server"];
-let css = "";
-buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));
-css = css.concat('[id="channel-attach-THREAD"]{display:none}');
+css = css.concat('div[class^="channelAppLauncher"]{display:none}');
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
 ```
