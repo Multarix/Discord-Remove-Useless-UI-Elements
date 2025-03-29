@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Discord Hide Useless Chat Buttons
+// @name        Discord Hide Useless Chat Buttons (Remove All)
 // @namespace   https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @match       https://discord.com/*
 // @updateURL   https://raw.githubusercontent.com/Multarix/Discord-Remove-Useless-UI-Elements/master/all.user.js
