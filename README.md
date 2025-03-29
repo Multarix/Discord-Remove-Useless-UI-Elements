@@ -1,5 +1,5 @@
-# Discord: Remove useless chat buttons
-Remove the gift nitro, gif and sticker buttons from the chat bar in discord!
+# Discord: Remove Uselsss UI Elements
+Remove the gift nitro, activity buttons and more!
 
 ## IMPORTANT INFO - 26/01/2022
 Discord seems to have disabled accessing the developer console within the production version.<br>
