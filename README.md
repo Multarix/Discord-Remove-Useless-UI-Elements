@@ -9,14 +9,14 @@ There are currently 2 work arounds:<br>
 
 
 ## What is this for?
-This repository is for those looking to hide the "Gift Nitro", "Boost this server", "Stickers" or "GIF" buttons from the chat bar in discord. If reading this far into the future, please note that this may not work.<br>
+This repository is for those looking to hide annoying elements from discord, such as the gift nitro button or the new intrusive game playing bar. If reading this far into the future, please note that this may not work - though I try to update it when it breaks.<br>
 
 There are 2 versions of the scripts here:<br>
-1. "All" versions remove the Gift Nitro, Stickers and GIF buttons, (Note that you can still access gifs and stickers via the tabs in the emoji button that remains)
-2. "KeepGIF" versions remove the Gift Nitro and Sticker buttons only (Note that you can still access the stickers via the tab in the emoji/ gif buttons that remain)
+1. "All" versions removes all of the annoying elements from the UI, all the chat bar buttons minus the emoji button as well as the + button for uploading images and what not.
+2. "KeepGIF" version removes all of the above minus the gif button on the chat bar (I recommend this one personally)
 
 
-###  **The script will need to be re-pasted in every time you start discord. If something goes wrong, restarting discord should fix it.**
+###  **The script will need to be re-pasted in every time you start discord. If something goes wrong, restarting discord or pressing ctrl+r should fix it.**
 #### _**I hold no responsibility for you breaking your discord or other things happening**_
 
 <br>
@@ -29,17 +29,17 @@ Copy and paste the script into the console and hit enter.<br>
 
 ## Userscripts
 In the event you use the web based version of discord rather than the app, Tampermonkey versions are available too:
-- Remove All - https://github.com/Multarix/Discord-Remove-useless-chat-buttons/raw/main/all.user.js
-- Keep GIF - https://github.com/Multarix/Discord-Remove-useless-chat-buttons/raw/main/keepGif.user.js
+- Remove All - https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/raw/main/all.user.js
+- Keep GIF - https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/raw/main/keepGif.user.js
 
 #### Quick Access: All Version
 
 ```js
-const buttonsToHide = ["Open GIF picker", "Open sticker picker", "Send a gift", "Boost this server"];
+const buttonsToHide = ["Open GIF picker", "Open sticker picker", "Send a gift", "Boost this server", "Apps"];
 let css = "";
-buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));
-css = css.concat('[id="channel-attach-THREAD"]{display:none}');
-css = css.concat('div[class^="channelAppLauncher"]{display:none}');
+buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
+css = css.concat('div[class^="channelAppLauncher"]{display:none}');									// Remove "Start activity button"
+css = css.concat('div[class*="activityPanel"]{display:none}');										// Remove intrusive "game being played" bar
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
 ```
@@ -47,11 +47,11 @@ document.body.appendChild(style);
 #### Quick Access: Keep GIF Version
 
 ```js
-const buttonsToHide = ["Open sticker picker", "Send a gift", "Boost this server"];
+const buttonsToHide = ["Open sticker picker", "Send a gift", "Boost this server", "Apps"];
 let css = "";
-buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));
-css = css.concat('[id="channel-attach-THREAD"]{display:none}');
-css = css.concat('div[class^="channelAppLauncher"]{display:none}');
+buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
+css = css.concat('div[class^="channelAppLauncher"]{display:none}');									// Remove "Start activity button"
+css = css.concat('div[class*="activityPanel"]{display:none}');										// Remove intrusive "game being played" bar
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
 ```
