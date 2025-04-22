@@ -17,45 +17,18 @@ There are 2 versions of the scripts here:<br>
 
 
 ###  **The script will need to be re-pasted in every time you start discord. If something goes wrong, restarting discord or pressing ctrl+r should fix it.**
+###  **You can use something like [AdGaurd](https://adguard.com/en/welcome.html) to auto apply these scripts on your device, which means you do not need to paste it in each time.**
 #### _**I hold no responsibility for you breaking your discord or other things happening**_
 
 <br>
-To use these, while discord is open, press <i>Ctrl + Shift + I</i>. You will be presented with a console. First and foremost you'll be greeted with a giant message telling you that pasting anything inside the console has a high chance of being a scam. The reason they tell you this, is due to potential security/ account stealing problems, as well as potentially doing exactly what this script aimed to do: Removing nitro bloat. If unsure, get someone else to check the code before using it.
+To use these, while discord is open, press <i>Ctrl + Shift + I</i>. You will be presented with a console. First and foremost you'll be greeted with a giant message telling you that pasting anything inside the console has a high chance of being a scam. The reason they tell you this, is due to potential security/ account stealing problems, as well as potentially doing exactly what this script aimed to do: Removing nitro/ p2w bloat. If unsure, get someone else to check the code before using it.
+
 Copy and paste the script into the console and hit enter.<br>
 
 ### Some last minute warnings
 - This may potentially hide other objects related to these things in the future if discord changes anything, so as stated above, if you happen to be using this far into the future, it may not work as expected.
 - Trying to use both versions of the script at the same time will probably cause problems, don't try it.
 
-## Userscripts
-In the event you use the web based version of discord rather than the app, Tampermonkey versions are available too:
+## Scripts
 - Remove All - https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/raw/main/all.user.js
 - Keep GIF - https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/raw/main/keepGif.user.js
-
-#### Quick Access: All Version
-
-```js
-const buttonsToHide = ["Open GIF picker", "Open sticker picker", "Send a gift", "Boost this server", "Apps"];
-let css = "";
-buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
-css = css.concat('div[class^="channelAppLauncher"]{display:none}');									// Remove "Start activity button"
-css = css.concat('div[class*="activityPanel"]{display:none}');										// Remove intrusive "game being played" bar
-css = css.concat('div[style*="background: linear-gradient"]{display:none}');						// Remove Nameplates
-css = css.concat('img[src*="nameplates"]{display:none}');
-const style = document.createElement('style'); style.innerHTML = css;
-document.body.appendChild(style);
-```
-
-#### Quick Access: Keep GIF Version
-
-```js
-const buttonsToHide = ["Open sticker picker", "Send a gift", "Boost this server", "Apps"];
-let css = "";
-buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
-css = css.concat('div[class^="channelAppLauncher"]{display:none}');									// Remove "Start activity button"
-css = css.concat('div[class*="activityPanel"]{display:none}');										// Remove intrusive "game being played" bar
-css = css.concat('div[style*="background: linear-gradient"]{display:none}');						// Remove Nameplates
-css = css.concat('img[src*="nameplates"]{display:none}');
-const style = document.createElement('style'); style.innerHTML = css;
-document.body.appendChild(style);
-```
