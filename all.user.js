@@ -6,15 +6,18 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.6.1
+// @version     1.7.0
 // @author      Multarix
 // @description Working as of: 29/03/2025
 // ==/UserScript==
+
 
 const buttonsToHide = ["Open GIF picker", "Open sticker picker", "Send a gift", "Boost this server", "Apps"];
 let css = "";
 buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
 css = css.concat('div[class^="channelAppLauncher"]{display:none}');									// Remove "Start activity button"
 css = css.concat('div[class*="activityPanel"]{display:none}');										// Remove intrusive "game being played" bar
+css = css.concat('div[style*="background: linear-gradient"]{display:none}');						// Remove Nameplates
+css = css.concat('img[src*="nameplates"]{display:none}');
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
