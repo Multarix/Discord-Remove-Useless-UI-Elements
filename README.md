@@ -40,6 +40,8 @@ let css = "";
 buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
 css = css.concat('div[class^="channelAppLauncher"]{display:none}');									// Remove "Start activity button"
 css = css.concat('div[class*="activityPanel"]{display:none}');										// Remove intrusive "game being played" bar
+css = css.concat('div[style*="background: linear-gradient"]{display:none}');						// Remove Nameplates
+css = css.concat('img[src*="nameplates"]{display:none}');
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
 ```
@@ -52,6 +54,8 @@ let css = "";
 buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
 css = css.concat('div[class^="channelAppLauncher"]{display:none}');									// Remove "Start activity button"
 css = css.concat('div[class*="activityPanel"]{display:none}');										// Remove intrusive "game being played" bar
+css = css.concat('div[style*="background: linear-gradient"]{display:none}');						// Remove Nameplates
+css = css.concat('img[src*="nameplates"]{display:none}');
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
 ```
