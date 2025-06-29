@@ -15,6 +15,10 @@ There are 2 versions of the scripts here:<br>
 1. "All" versions removes all of the annoying elements from the UI, all the chat bar buttons minus the emoji button as well as the + button for uploading images and what not.
 2. "KeepGIF" version removes all of the above minus the gif button on the chat bar (I recommend this one personally)
 
+Additionally you can run `removeElements.js` to remove elements from the app, like:
+
+- "Nitro" and "Shop" buttons on the "Direct Messages" page
+![nitro and shop buttons](./nitro-and-shop-buttons.jpg?raw=true "nitro and shop buttons")
 
 ###  **The script will need to be re-pasted in every time you start discord. If something goes wrong, restarting discord or pressing ctrl+r should fix it.**
 ###  **You can use something like [AdGaurd](https://adguard.com/en/welcome.html) to auto apply these scripts on your device, which means you do not need to paste it in each time.**

@@ -59,28 +59,3 @@ css += baseCss;
 
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
-
-/**
- * removes buy nitro button from left panel
- */
-function removeBuyNitroButton() {
-  const nitroButtonHolder =
-    document.querySelector('[href="/store"]')?.parentElement?.parentElement;
-  if (nitroButtonHolder !== null && nitroButtonHolder !== undefined) {
-    nitroButtonHolder.style.display = "none";
-  }
-}
-
-/**
- * removes shop button from left panel
- */
-function removeShopButton() {
-  const shopButtonHolder =
-    document.querySelector('[href="/shop"]')?.parentElement?.parentElement;
-  if (shopButtonHolder !== null && shopButtonHolder !== undefined) {
-    shopButtonHolder.style.display = "none";
-  }
-}
-
-removeBuyNitroButton()
-removeShopButton()
