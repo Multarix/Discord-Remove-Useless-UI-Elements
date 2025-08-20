@@ -6,9 +6,9 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.7.1
+// @version     1.7.2
 // @author      Multarix
-// @description Working as of: 22/04/2025
+// @description Working as of: 20/08/2025
 // ==/UserScript==
 
 
@@ -34,10 +34,12 @@ let baseCss = `
 	margin-bottom: unset;
 }
 
+
 /* Remove the stupid notification button */
 [class^="tutorialContainer"] + [class^="listItem"]{
 	display:none;
 }
+
 
 /* Remove Nameplates */
 [style^="background: linear-gradient("]{
@@ -63,4 +65,5 @@ css += baseCss;
 
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
+
 
