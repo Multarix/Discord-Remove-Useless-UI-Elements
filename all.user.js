@@ -34,6 +34,10 @@ let baseCss = `
 	margin-bottom: unset;
 }
 
+/* Remove the stupid notification button */
+[class^="tutorialContainer"] + [class^="listItem"]{
+	display:none;
+}
 
 /* Remove Nameplates */
 [style^="background: linear-gradient("]{
@@ -59,3 +63,4 @@ css += baseCss;
 
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
+
