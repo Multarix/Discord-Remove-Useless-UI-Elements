@@ -8,7 +8,7 @@
 // @grant       none
 // @version     1.7.4
 // @author      Multarix
-// @description Working as of: 20/08/2025
+// @description Working as of: 23/10/2025
 // ==/UserScript==
 
 
@@ -73,6 +73,7 @@ css += baseCss;
 
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
+
 
 
 
