@@ -60,7 +60,6 @@ let baseCss = `
 li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="quests"]) {
 	display: none;
 }
-
 li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="nitro"]) {
 	display: none;
 }
@@ -75,4 +74,5 @@ css += baseCss;
 const style = document.createElement('style'); style.innerHTML = css;
 
 document.body.appendChild(style);
+
 
