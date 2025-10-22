@@ -6,9 +6,9 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.7.3
+// @version     1.7.4
 // @author      Multarix
-// @description Working as of: 22/10/2025
+// @description Working as of: 23/10/2025
 // ==/UserScript==
 
 
@@ -57,7 +57,11 @@ let baseCss = `
 }
 
 /* Remove Quests & Nitro*/
-[aria-label="Direct Messages"] > [class^="channel"]:nth-child(4), [aria-label="Direct Messages"] > :nth-child(6) {
+li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="quests"]) {
+	display: none;
+}
+
+li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="nitro"]) {
 	display: none;
 }
 `;
@@ -71,3 +75,4 @@ css += baseCss;
 const style = document.createElement('style'); style.innerHTML = css;
 
 document.body.appendChild(style);
+
