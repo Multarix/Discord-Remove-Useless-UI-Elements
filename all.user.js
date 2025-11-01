@@ -6,9 +6,9 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.7.4
+// @version     1.7.5
 // @author      Multarix
-// @description Working as of: 23/10/2025
+// @description Working as of: 1/11/2025
 // ==/UserScript==
 
 
@@ -56,12 +56,19 @@ let baseCss = `
 	display: none;
 }
 
+
 /* Remove Quests & Nitro*/
 li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="quests"]) {
 	display: none;
 }
 li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="nitro"]) {
 	display: none;
+}
+
+
+/* Remove username fonts from member list */
+[class^="nameContainer"] > [class^="name"] {
+	font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 `;
 
