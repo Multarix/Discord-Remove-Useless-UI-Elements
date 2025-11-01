@@ -13,7 +13,7 @@
 
 
 let baseCss = `
-/* Remove "Start activity button */
+/* Remove "Start activity" button */
 [class^="channelAppLauncher"]{
 	display: none;
 }
@@ -80,6 +80,7 @@ css += baseCss;
 
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
+
 
 
 
