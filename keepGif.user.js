@@ -6,9 +6,9 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.7.5
+// @version     1.7.6
 // @author      Multarix
-// @description Working as of: 1/11/2025
+// @description Working as of: 14/11/2025
 // ==/UserScript==
 
 
@@ -69,6 +69,13 @@ li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="nitro"
 /* Remove username fonts from member list */
 [class^="nameContainer"] > [class^="name"] {
 	font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+
+
+/* Hide the stupid voice channel status garbage */
+[class^="iconGroup"]:has([class^="icons"] > [role="img"]) {
+	display: none;
 }
 `;
 
