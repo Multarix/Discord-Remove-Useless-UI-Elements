@@ -6,9 +6,9 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.7.7
+// @version     1.7.8
 // @author      Multarix
-// @description Working as of: 7/12/2025
+// @description Working as of: 17/12/2025
 // ==/UserScript==
 
 
@@ -58,15 +58,15 @@ let baseCss = `
 
 
 /* Remove Quests & Nitro*/
-li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="quests"]) {
+li[class*="channel"]:has( > [class*="interactive"] > [data-list-item-id*="quests"]) {
 	display: none;
 }
-li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="nitro"]) {
+li[class*="channel"]:has( > [class*="interactive"] > [data-list-item-id*="nitro"]) {
 	display: none;
 }
 
 /* Stops message requests from disappearing */
-li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="messageRequests"]) {
+li[class*="channel"]:has( > [class*="interactive"] > [data-list-item-id*="messageRequests"]) {
 	display: block;
 }
 
@@ -92,6 +92,7 @@ css += baseCss;
 const style = document.createElement('style'); style.innerHTML = css;
 
 document.body.appendChild(style);
+
 
 
 
