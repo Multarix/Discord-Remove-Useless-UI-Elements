@@ -6,7 +6,7 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.7.8
+// @version     1.7.9
 // @author      Multarix
 // @description Working as of: 2/2/2026
 
