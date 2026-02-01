@@ -8,11 +8,7 @@
 // @grant       none
 // @version     1.7.8
 // @author      Multarix
-<<<<<<< HEAD
 // @description Working as of: 2/2/2026
-=======
-// @description Working as of: 17/12/2025
->>>>>>> a1f699183a01d6d059236b84396f7eb7d1dd2c41
 // ==/UserScript==
 
 
