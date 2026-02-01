@@ -8,7 +8,11 @@
 // @grant       none
 // @version     1.7.8
 // @author      Multarix
+<<<<<<< HEAD
 // @description Working as of: 2/2/2026
+=======
+// @description Working as of: 17/12/2025
+>>>>>>> a1f699183a01d6d059236b84396f7eb7d1dd2c41
 // ==/UserScript==
 
 
@@ -58,15 +62,15 @@ let baseCss = `
 
 
 /* Remove Quests & Nitro*/
-li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="quests"]) {
+li[class*="channel"]:has( > [class*="interactive"] > [data-list-item-id*="quests"]) {
 	display: none;
 }
-li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="nitro"]) {
+li[class*="channel"]:has( > [class*="interactive"] > [data-list-item-id*="nitro"]) {
 	display: none;
 }
 
 /* Stops message requests from disappearing */
-li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="messageRequests"]) {
+li[class*="channel"]:has( > [class*="interactive"] > [data-list-item-id*="messageRequests"]) {
 	display: block;
 }
 
@@ -97,6 +101,7 @@ css += baseCss;
 
 const style = document.createElement('style'); style.innerHTML = css;
 document.body.appendChild(style);
+
 
 
 
