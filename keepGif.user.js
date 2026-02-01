@@ -9,7 +9,6 @@
 // @version     1.7.8
 // @author      Multarix
 // @description Working as of: 2/2/2026
-// ==/UserScript==
 
 
 let baseCss = `
