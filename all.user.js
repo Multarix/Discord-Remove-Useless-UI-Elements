@@ -6,9 +6,9 @@
 // @homepageURL https://github.com/Multarix/Discord-Remove-Useless-UI-Elements
 // @supportURL  https://github.com/Multarix/Discord-Remove-Useless-UI-Elements/issues
 // @grant       none
-// @version     1.7.7
+// @version     1.7.8
 // @author      Multarix
-// @description Working as of: 7/12/2025
+// @description Working as of: 2/2/2026
 // ==/UserScript==
 
 
@@ -79,6 +79,12 @@ li[class^="channel"]:has( > [class^="interactive"] > [data-list-item-id*="messag
 
 /* Hide the stupid voice channel status garbage */
 [class^="iconGroup"]:has([class^="icons"] > [role="img"]) {
+	display: none;
+}
+
+
+/* Hide the weird back button that's distracting */
+[class^="backForwardButtons"] {
 	display: none;
 }
 `;
