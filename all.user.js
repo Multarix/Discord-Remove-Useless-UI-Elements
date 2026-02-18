@@ -20,14 +20,14 @@ let baseCss = `
 
 
 /* Unfuckifiy the user panel */
-.visual-refresh section[aria-label="User area"] {
+.visual-refresh section[aria-label="User status and settings"] {
 	width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
 	left: calc(var(--custom-guild-list-width) + 1px);
 	bottom: 0px;
 	border-radius: 0px;
 	border: none;
 }
-.visual-refresh section[aria-label="User area"] [class*="activityPanel"] {
+.visual-refresh section[aria-label="User status and settings"] [class*="activityPanel"] {
 	border-radius: 0px;
 }
 .visual-refresh nav:has([data-list-id="guildsnav"]) {
