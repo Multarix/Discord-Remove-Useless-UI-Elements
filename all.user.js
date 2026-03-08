@@ -90,7 +90,7 @@ li[class*="channel"]:has( > [class*="interactive"] > [data-list-item-id*="messag
 `;
 
 
-const buttonsToHide = ["Open GIF picker", "Open sticker picker", "Send a gift", "Boost this server", "Apps"];
+const buttonsToHide = ["Open GIF picker", "Open sticker picker", "Send a gift", "Give a Gift", "Boost this server", "Apps"];
 let css = "";
 buttonsToHide.forEach(button => css = css.concat(`[aria-label="${button}"]{display:none}`));		// Remove chat bar buttons
 css += baseCss;
